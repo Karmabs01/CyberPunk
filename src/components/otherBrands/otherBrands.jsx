@@ -1,0 +1,148 @@
+import Loader from "../Loader/Loader";
+import { useTranslation } from "react-i18next";
+
+import React, { useEffect, useState } from 'react';
+import { PlayCircleIcon } from '@heroicons/react/20/solid'
+
+function OtherBrands({
+  otherData = [],
+  newUrl,
+  ipData,
+  ipDataCode,
+  currentLanguage,
+  country,
+  source,
+  selectedCountry,
+  setSelectedCountry,
+}) {
+  const stepSize = 6
+  const [step, setStep] = useState(stepSize);
+  const [isAllElements, setAllElements] = useState(false);
+  const [visibleData, setVisibleData] = useState([]);
+
+  const { t } = useTranslation();
+
+  function showData(array) {
+    const showedArray = array.slice();
+    if (showedArray.length > step) {
+      setAllElements(false);
+      return showedArray.slice(0, step);
+    } else {
+      setAllElements(true);
+      return showedArray;
+    }
+  }
+
+
+  useEffect(() => {
+
+    const geo = selectedCountry.toUpperCase();
+    let filteredDataOther = [];
+
+    if (geo) {
+      filteredDataOther = otherData.filter(
+        (rowData) =>
+          rowData.GEO === geo &&
+          rowData.CurrentStatus === "Ongoing" &&
+          rowData.CasinoBrand !== "Mirax (FS)" &&
+          rowData.CasinoBrand !== "Katsubet (FS)" &&
+          rowData.CasinoBrand !== "7Bit (FS)" &&
+          rowData.High_hybrid === "1"
+      );
+    } else {
+      filteredDataOther = otherData.filter(
+        (rowData) =>
+          rowData.GEO === ipDataCode &&
+          rowData.CurrentStatus === "Ongoing" &&
+          rowData.CasinoBrand !== "Mirax (FS)" &&
+          rowData.CasinoBrand !== "Katsubet (FS)" &&
+          rowData.CasinoBrand !== "7Bit (FS)" &&
+          rowData.High_hybrid === "1"
+      );
+    }
+
+    if (geo === "ALL") {
+      filteredDataOther = otherData.filter(
+        (rowData) =>
+          rowData.GEO === geo &&
+          rowData.CurrentStatus === "Ongoing" &&
+          rowData.CasinoBrand !== "Mirax (FS)" &&
+          rowData.CasinoBrand !== "Katsubet (FS)" &&
+          rowData.CasinoBrand !== "7Bit (FS)" &&
+          rowData.Segment2 !== ""
+      );
+    }
+
+    if (filteredDataOther.length !== 0) {
+      if (geo !== "ALL") {
+        const arrLength = filteredDataOther.length / 2;
+        setVisibleData(showData(filteredDataOther.slice(arrLength)));
+      } else {
+        setVisibleData(showData(filteredDataOther));
+      }
+    }
+
+  }, [otherData, step, selectedCountry, ipDataCode]);
+
+  const loadMoreItems = () => {
+    setStep(prevIndex => prevIndex + stepSize);
+  };
+
+  if (!otherData) {
+    return <Loader />;
+  }
+
+  return (
+    <div className="container">
+      {visibleData.length > 0 && (
+        <div>
+          <div className="row align-items-center">
+            <div className="col-12 col-lg-12 mb-12 mb-lg-0">
+              <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Top Picks")}</h2>
+            </div>
+          </div>
+          <div className="rounded-md bg-gray-600/60 mt-10 mb-10">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 py-5 lg:px-8" data-aos="fade-up">
+              {visibleData.map((rowData, index) => (
+                <a href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"} >
+
+                  <div
+                    key={index}
+                    className="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white/60 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
+                  >
+                    <div className="flex-shrink-0">
+                      <img alt="" src={rowData["LinkImg"]} className="h-20 w-20 rounded" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="focus:outline-none">
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        <div className="flex-1 text-sm">
+                          <p className="text-sm text-gray-500">{rowData["OurOfferContent"]}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0 pr-2">
+                      <button
+                        type="button"
+                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      >
+                        <span className="sr-only">Open options</span>
+                        <PlayCircleIcon aria-hidden="true" className="h-5 w-5" />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+
+  );
+
+}
+
+
+export default OtherBrands;
