@@ -8,6 +8,8 @@ import heroPic7 from "../images/hero/hero-bg-7.png";
 import heroPic8 from "../images/hero/hero-bg-8.png";
 import heroPic9 from "../images/hero/hero-bg-9.png"
 
+import { useTranslation } from "react-i18next";
+
 const images = [heroPic1, heroPic2, heroPic3, heroPic4, heroPic5, heroPic6, heroPic7, heroPic8, heroPic9]
 
 const description = [
@@ -16,7 +18,6 @@ const description = [
     "Unlock the treasures of tomorrow. Play and experience next-level gaming.",
     "Feel the pulse of big wins. High-voltage games and massive jackpots await you.",
     "High-tech meets high stakes. Dive into a world of futuristic wins and endless possibilities.",
-    "Get ready for a shockwave of excitement. Play and light up your winnings.",
     "Where the future meets fortune. Enjoy electrifying games and endless winning opportunities.",
     "Discover a casino like no other. Neon lights, big wins, and endless excitement await you.",
     "The future of gaming is here. Join for a chance to win big in a neon-lit world.",
@@ -25,12 +26,8 @@ const description = [
     "A casino that redefines winning. Enjoy thrilling games and electrifying jackpots.",
     "Step into the electric atmosphere. Unleash your luck and enjoy big wins.",
     "Where every spin is charged with excitement. Ignite your fortune and play now.",
-    "Pulse-pounding action awaits. Spin the reels and let the neon guide you to victory.",
-    "Experience the rhythm of winning. Ride the wave of excitement and big rewards.",
-    "Where every game pulses with potential. Light up your luck and win big.",
-    "Your dreams of winning come true here. Embrace the thrill and massive jackpots.",
-    "A casino that turns dreams into reality. Enjoy neon-lit games and endless excitement.",
-    "Step into a dreamlike world of big wins. Let your fortune unfold and play now."]
+    "Pulse-pounding action awaits. Spin the reels and let the neon guide you to victory."
+]
 
 function getRandomBackground() {
     const totalImages = 8;
@@ -45,6 +42,8 @@ function getRandomDescription() {
 }
 
 export default function Banner(brand) {
+    const { t } = useTranslation();
+
     const backgroundImage = getRandomBackground();
     const desc = getRandomDescription()
 
@@ -71,9 +70,9 @@ export default function Banner(brand) {
                     <figure>
                         <blockquote className="mt-6 text-lg font-bold text-white sm:text-xl sm:leading-8">
                             <h1 className="neon-blue">
-                                {brand.brand}
+                                {t(brand.brand)}
                             </h1>
-                            <h5>{desc}</h5>
+                            <h5>{t(desc)}</h5>
                             <h4 className="neon-pink">
                                 <span> {brand.bonus} </span>
                             </h4>
