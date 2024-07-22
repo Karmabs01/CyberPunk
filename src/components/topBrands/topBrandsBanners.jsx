@@ -86,7 +86,7 @@ function TopBrandsBanners({
 
 
         if (newFilteredDataWithTopData.length === 0) {
-            setSelectedCountry("all");
+            // setSelectedCountry("all");
         } else {
             setFilteredData(newFilteredDataWithTopData);
             setCarouselKey(prevKey => prevKey + 1);

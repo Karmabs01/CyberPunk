@@ -135,9 +135,9 @@ function TimerBrands({
                     setLoading(false);
 
                     // Если нет брендов, вызывать setSelectedCountry
-                    // if (filteredDataOther.length === 0) {
-                    //   setSelectedCountry("all");
-                    // }
+                    if (filteredDataOther.length === 0) {
+                      setSelectedCountry("all");
+                    }
                 } else {
                     console.error("Failed to fetch data:", res.status);
                 }

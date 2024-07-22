@@ -44,103 +44,6 @@ function ChildComponent() {
   let topComponentData = data.brandsNew;
   let anotherBrands = data.brandsNew;
 
-
-  // let otherData = [];
-  // let topComponentData = [];
-  // let anotherBrands = [];
-
-  // if (!loading) {
-  //   if (geo) {
-  //     otherData = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === geo &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["High_hybrid"] === "1"
-  //     );
-  //     topComponentData = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === geo &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["High_hybrid"] === "1"
-  //     );
-  //     anotherBrands = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === geo &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["High_hybrid"] === "1"
-  //     );
-
-  //   } else {
-  //     otherData = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === ipDataCode &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["High_hybrid"] === "1"
-  //     );
-  //     topComponentData = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === ipDataCode &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["High_hybrid"] === "1"
-  //     );
-  //     anotherBrands = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === ipDataCode &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["High_hybrid"] === "1"
-  //     );
-
-  //   }
-  //   if (geo === "ALL") {
-  //     otherData = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === geo &&
-  //         rowData.CurrentStatus === "Ongoing" &&
-  //         rowData.CasinoBrand !== "Mirax (FS)" &&
-  //         rowData.CasinoBrand !== "Katsubet (FS)" &&
-  //         rowData.CasinoBrand !== "7Bit (FS)" &&
-  //         rowData.Segment2 !== ""
-  //     );
-  //     topComponentData = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === geo &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["Trendsetting"] === "1"
-  //     );
-  //     anotherBrands = data.brandsNew.filter(
-  //       (rowData) =>
-  //         rowData.GEO === geo &&
-  //         rowData["CurrentStatus"] === "Ongoing" &&
-  //         rowData["CasinoBrand"] !== "Mirax (FS)" &&
-  //         rowData["CasinoBrand"] !== "Katsubet (FS)" &&
-  //         rowData["CasinoBrand"] !== "7Bit (FS)" &&
-  //         rowData["FirstPriority"] === "1"
-  //     );
-
-  //   }
-  // }
-
   const countryOptions = [
     { code: "au", name: "Australia", flag: "🇦🇺" },
     { code: "at", name: "Austria", flag: "🇦🇹" },
@@ -265,6 +168,7 @@ function ChildComponent() {
         setIpData(data.country_name);
         setIpDataCode(data.country);
         setSelectedCountry(data.country.toLowerCase());
+        console.log("THIS GEO:", data.country_name, data.country, data.country.toLowerCase())
       })
       .catch((error) => {
         console.error("Ошибка при запросе к API:", error);
@@ -321,6 +225,8 @@ function ChildComponent() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  console.log("Writed data:", selectedCountry)
 
   return (
     <div>
