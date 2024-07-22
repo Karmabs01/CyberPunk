@@ -168,7 +168,7 @@ function ChildComponent() {
         setIpData(data.country_name);
         setIpDataCode(data.country);
         setSelectedCountry(data.country.toLowerCase());
-        console.log("THIS GEO:", data.country_name, data.country, data.country.toLowerCase())
+        console.log("THIS GEO:", data.country_name, data.country)
       })
       .catch((error) => {
         console.error("Ошибка при запросе к API:", error);
@@ -200,6 +200,8 @@ function ChildComponent() {
 
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
+    console.log("COUNTRY:", country)
+    i18n.changeLanguage(country);
     localStorage.setItem("selectedCountry", country);
     document.documentElement.classList.remove("fixed-position");
     console.log("handleCountryChange")
