@@ -970,3 +970,9 @@ p {
     text-overflow: ellipsis;
   }
 }
+
+.collection-view a {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
