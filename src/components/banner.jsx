@@ -1,9 +1,41 @@
-import { useEffect } from "react";
+import heroPic1 from "../images/hero/hero-bg-1.png";
+import heroPic2 from "../images/hero/hero-bg-2.png";
+import heroPic3 from "../images/hero/hero-bg-3.png";
+import heroPic4 from "../images/hero/hero-bg-4.png";
+import heroPic5 from "../images/hero/hero-bg-5.png";
+import heroPic6 from "../images/hero/hero-bg-6.png";
+import heroPic7 from "../images/hero/hero-bg-7.png";
+import heroPic8 from "../images/hero/hero-bg-8.png";
+import heroPic9 from "../images/hero/hero-bg-9.png"
+
+const images = [heroPic1, heroPic2, heroPic3, heroPic4, heroPic5, heroPic6, heroPic7, heroPic8, heroPic9]
+
+const description = [
+    "Experience the ultimate cyberpunk adventure. Dive into neon-lit streets and high-stakes excitement.",
+    "Step into a world where luck shines brighter than neon. Embrace the thrill and win big at our casino!",
+    "Unlock the treasures of tomorrow. Play and experience next-level gaming.",
+    "Feel the pulse of big wins. High-voltage games and massive jackpots await you.",
+    "High-tech meets high stakes. Dive into a world of futuristic wins and endless possibilities.",
+    "Get ready for a shockwave of excitement. Play and light up your winnings.",
+    "Where the future meets fortune. Enjoy electrifying games and endless winning opportunities.",
+    "Discover a casino like no other. Neon lights, big wins, and endless excitement await you.",
+    "The future of gaming is here. Join for a chance to win big in a neon-lit world.",
+    "Power up your gaming experience. Electrifying games and huge rewards are waiting for you.",
+    "Feel the beat of big wins. Let your luck shine through. Claim your fortune today!",
+    "A casino that redefines winning. Enjoy thrilling games and electrifying jackpots.",
+    "Step into the electric atmosphere. Unleash your luck and enjoy big wins.",
+    "Where every spin is charged with excitement. Ignite your fortune and play now.",
+    "Pulse-pounding action awaits. Spin the reels and let the neon guide you to victory.",
+    "Experience the rhythm of winning. Ride the wave of excitement and big rewards.",
+    "Where every game pulses with potential. Light up your luck and win big.",
+    "Your dreams of winning come true here. Embrace the thrill and massive jackpots.",
+    "A casino that turns dreams into reality. Enjoy neon-lit games and endless excitement.",
+    "Step into a dreamlike world of big wins. Let your fortune unfold and play now."]
 
 function getRandomBackground() {
-    const totalImages = 9;
+    const totalImages = 8;
     const randomIndex = Math.floor(Math.random() * totalImages) + 1;
-    return `../src/images/hero/hero-bg-${randomIndex}.png`;
+    return images[randomIndex];
 }
 
 function getRandomDescription() {
@@ -19,7 +51,7 @@ export default function Banner(brand) {
     return (
         <div className="banner w-full">
             <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 py-20 shadow-xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
-                {brand.image === "random" ? (
+                {brand.image === "-1" ? (
                     <img
                         alt=""
                         src={backgroundImage}
@@ -28,7 +60,7 @@ export default function Banner(brand) {
                 ) : (
                     <img
                         alt=""
-                        src={brand.image}
+                        src={images[brand.image]}
                         className="absolute inset-0 h-full w-full object-cover"
                     />
                 )
@@ -61,25 +93,3 @@ export default function Banner(brand) {
         </div>
     )
 }
-
-const description = [
-    "Experience the ultimate cyberpunk adventure. Dive into neon-lit streets and high-stakes excitement.",
-    "Step into a world where luck shines brighter than neon. Embrace the thrill and win big at our casino!",
-    "Unlock the treasures of tomorrow. Play and experience next-level gaming.",
-    "Feel the pulse of big wins. High-voltage games and massive jackpots await you.",
-    "High-tech meets high stakes. Dive into a world of futuristic wins and endless possibilities.",
-    "Get ready for a shockwave of excitement. Play and light up your winnings.",
-    "Where the future meets fortune. Enjoy electrifying games and endless winning opportunities.",
-    "Discover a casino like no other. Neon lights, big wins, and endless excitement await you.",
-    "The future of gaming is here. Join for a chance to win big in a neon-lit world.",
-    "Power up your gaming experience. Electrifying games and huge rewards are waiting for you.",
-    "Feel the beat of big wins. Let your luck shine through. Claim your fortune today!",
-    "A casino that redefines winning. Enjoy thrilling games and electrifying jackpots.",
-    "Step into the electric atmosphere. Unleash your luck and enjoy big wins.",
-    "Where every spin is charged with excitement. Ignite your fortune and play now.",
-    "Pulse-pounding action awaits. Spin the reels and let the neon guide you to victory.",
-    "Experience the rhythm of winning. Ride the wave of excitement and big rewards.",
-    "Where every game pulses with potential. Light up your luck and win big.",
-    "Your dreams of winning come true here. Embrace the thrill and massive jackpots.",
-    "A casino that turns dreams into reality. Enjoy neon-lit games and endless excitement.",
-    "Step into a dreamlike world of big wins. Let your fortune unfold and play now."]

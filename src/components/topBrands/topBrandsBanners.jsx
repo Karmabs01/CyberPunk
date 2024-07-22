@@ -111,7 +111,7 @@ function TopBrandsBanners({
                                         brand="Biggest jackpot"
                                         link="https://topbon.us"
                                         bonus={rowData["OurOfferContent"]}
-                                        image = "../src/images/hero/hero-bg-1.png"
+                                        image = "0"
                                     />
                                 ))
                                 }
@@ -122,7 +122,7 @@ function TopBrandsBanners({
                                         brand="Exclusive offer"
                                         link="https://topbon.us"
                                         bonus={rowData["OurOfferContent"]}
-                                        image = "../src/images/hero/hero-bg-5.png"
+                                        image = "4"
 
                                     />
                                 ))

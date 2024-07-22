@@ -110,7 +110,7 @@ function TopBrands({
                   brand={rowData["CasinoBrand"]}
                   link={rowData["GoBig"] + newUrl + "L_cyber-spin_1"}
                   bonus={rowData["OurOfferContent"]}
-                  image="random"
+                  image = "-1"
                 />
               )
               )}
