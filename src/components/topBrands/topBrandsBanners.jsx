@@ -108,6 +108,7 @@ function TopBrandsBanners({
                             <div className="col-12 col-lg-6 mb-6 mb-lg-0 " data-aos="fade-right">
                                 {filteredData.slice(0, 1).map((rowData, index) => (
                                     <Banner
+                                        key={index}
                                         brand="Biggest jackpot"
                                         link="https://topbon.us"
                                         bonus={rowData["OurOfferContent"]}
@@ -119,6 +120,7 @@ function TopBrandsBanners({
                             <div className="col-12 col-lg-6 mb-6 mb-lg-0" data-aos="fade-left">
                                 {filteredData.slice(1, 2).map((rowData, index) => (
                                     <Banner
+                                        key={index+1}
                                         brand="Exclusive offer"
                                         link="https://topbon.us"
                                         bonus={rowData["OurOfferContent"]}

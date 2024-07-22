@@ -226,8 +226,6 @@ function ChildComponent() {
     };
   }, []);
 
-  console.log("Writed data:", selectedCountry)
-
   return (
     <div>
       <AnotherBrands

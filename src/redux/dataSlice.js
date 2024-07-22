@@ -48,8 +48,6 @@ export const fetchData = createAsyncThunk(
           url = apiOld; // Для всех остальных случаев
       }
 
-      console.log(url)
-
       const response = await fetch(url);
       return response.json();
     } catch (error) {

@@ -80,23 +80,7 @@ function AnotherBrands({
     setOtherData(shuffleArray(filteredDataOther));
     setLoading(false);
 
-  }, [ipDataCode, currentLanguage, selectedCountry, source]);
-
-  const options = {
-    loop: true,
-    margin: 40,
-    responsive: {
-      0: {
-        items: 2
-      },
-      600: {
-        items: 3
-      },
-      1100: {
-        items: 5
-      }
-    }
-  };
+  }, [ipDataCode, currentLanguage, selectedCountry, source, anotherBrands]);
 
   return (
     <section className="hero" id="home">
@@ -104,7 +88,6 @@ function AnotherBrands({
         <div className="container mt-5">
           <div className="row align-items-center">
             <div className="col-12 position-relative align-self-center" data-aos="fade-up">
-              {/* <p className="sub-heading mt-5 mb-3 fs-4 fw-bold theme-text-primary">{t("Discover the Best Online Casino Offers")}</p> */}
               <h1 className="display-1 text-uppercase font-black max theme-text-white text-align-center">{t("Enter the Neon Realm of Luck")}</h1>
 
               <p className="fs-2 mt-10 theme-text-white text-align-center">{t("Where neon dreams and endless wins collide.")}</p>

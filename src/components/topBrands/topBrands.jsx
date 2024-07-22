@@ -111,6 +111,7 @@ function TopBrands({
                   link={rowData["GoBig"] + newUrl + "L_cyber-spin_1"}
                   bonus={rowData["OurOfferContent"]}
                   image = "-1"
+                  key = {index}
                 />
               )
               )}
