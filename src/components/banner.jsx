@@ -1,11 +1,13 @@
+import { useEffect } from "react";
+
 function getRandomBackground() {
-    const totalImages = 9; 
+    const totalImages = 9;
     const randomIndex = Math.floor(Math.random() * totalImages) + 1;
     return `../src/images/hero/hero-bg-${randomIndex}.png`;
 }
 
 function getRandomDescription() {
-    const total = description.length-1; 
+    const total = description.length - 1;
     const randomIndex = Math.floor(Math.random() * total) + 1;
     return description[randomIndex];
 }
@@ -15,13 +17,23 @@ export default function Banner(brand) {
     const desc = getRandomDescription()
 
     return (
-        <div className="w-full">
+        <div className="banner w-full">
             <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 py-20 shadow-xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
-                <img
-                    alt=""
-                    src={backgroundImage}
-                    className="absolute inset-0 h-full w-full object-cover"
-                />
+                {brand.image === "random" ? (
+                    <img
+                        alt=""
+                        src={backgroundImage}
+                        className="absolute inset-0 h-full w-full object-cover"
+                    />
+                ) : (
+                    <img
+                        alt=""
+                        src={brand.image}
+                        className="absolute inset-0 h-full w-full object-cover"
+                    />
+                )
+                }
+
                 <div className="absolute inset-0 bg-gray-900/60 mix-blend-multiply" />
                 <div className="relative mx-auto max-w-2xl lg:mx-0">
                     <figure>
@@ -50,7 +62,8 @@ export default function Banner(brand) {
     )
 }
 
-const description = ["Experience the ultimate cyberpunk adventure. Dive into neon-lit streets and high-stakes excitement. Claim your fortune today!",
+const description = [
+    "Experience the ultimate cyberpunk adventure. Dive into neon-lit streets and high-stakes excitement.",
     "Step into a world where luck shines brighter than neon. Embrace the thrill and win big at our casino!",
     "Unlock the treasures of tomorrow. Play and experience next-level gaming.",
     "Feel the pulse of big wins. High-voltage games and massive jackpots await you.",
@@ -60,7 +73,7 @@ const description = ["Experience the ultimate cyberpunk adventure. Dive into neo
     "Discover a casino like no other. Neon lights, big wins, and endless excitement await you.",
     "The future of gaming is here. Join for a chance to win big in a neon-lit world.",
     "Power up your gaming experience. Electrifying games and huge rewards are waiting for you.",
-    "Feel the beat of big wins. Let your luck shine through.",
+    "Feel the beat of big wins. Let your luck shine through. Claim your fortune today!",
     "A casino that redefines winning. Enjoy thrilling games and electrifying jackpots.",
     "Step into the electric atmosphere. Unleash your luck and enjoy big wins.",
     "Where every spin is charged with excitement. Ignite your fortune and play now.",

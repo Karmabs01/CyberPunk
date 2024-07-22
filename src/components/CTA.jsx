@@ -2,7 +2,7 @@ import heroPic from "../images/hero/about.jpg";
 
 export default function CTA() {
     return (
-      <div className="container rounded-3xl relative bg-gray-900 CTA">
+      <div className="container rounded-3xl relative bg-gray-900 CTA mb-10">
         <div className="relative rounded-3xl sm:rounded-l-3xl h-80 overflow-hidden bg-gray-900 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
           <img
             alt=""
