@@ -105,9 +105,9 @@ function AnotherBrands({
           <div className="row align-items-center">
             <div className="col-12 position-relative align-self-center" data-aos="fade-up">
               {/* <p className="sub-heading mt-5 mb-3 fs-4 fw-bold theme-text-primary">{t("Discover the Best Online Casino Offers")}</p> */}
-              <h1 className="display-1 text-uppercase font-black max theme-text-white text-align-center">{t("Las Vegas Adventure Starts Here")}</h1>
+              <h1 className="display-1 text-uppercase font-black max theme-text-white text-align-center">{t("Enter the Neon Realm of Luck")}</h1>
 
-              <p className="fs-5 mb-0 theme-text-white text-align-center">{t("Exclusive deals, big wins await!")}</p>
+              <p className="fs-2 mt-10 theme-text-white text-align-center">{t("Where neon dreams and endless wins collide.")}</p>
               <div className="group mt-5 btn-wrap">
                 {otherData.length > 0 ? (
                   otherData.slice(0, 1).map((rowData, index) => (
@@ -129,8 +129,6 @@ function AnotherBrands({
               </figure>
             </div> */}
           </div>
-        </div>
-        <div className="container my-5">
         </div>
       </div>
     </section>

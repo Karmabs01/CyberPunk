@@ -98,13 +98,13 @@ function OtherBrands({
         <div>
           <div className="row align-items-center">
             <div className="col-12 col-lg-12 mb-12 mb-lg-0">
-              <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Top Picks")}</h2>
+              <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Cyber City Jackpot")}</h2>
             </div>
           </div>
-          <div className="rounded-md bg-gray-600/60 mt-10 mb-10">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 py-5 lg:px-8" data-aos="fade-up">
+          <div className="rounded-md bg-gray-600/30 mt-10 mb-10">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 py-5 px-5 " data-aos="fade-up">
               {visibleData.map((rowData, index) => (
-                <a href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"} >
+                <a href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"}>
 
                   <div
                     key={index}
@@ -116,8 +116,8 @@ function OtherBrands({
                     <div className="min-w-0 flex-1">
                       <div className="focus:outline-none">
                         <span aria-hidden="true" className="absolute inset-0" />
-                        <div className="flex-1 text-sm">
-                          <p className="text-sm text-gray-500">{rowData["OurOfferContent"]}</p>
+                        <div className="flex-1 text-m">
+                          <p className="text-m text-gray-500">{rowData["OurOfferContent"]}</p>
                         </div>
                       </div>
                     </div>

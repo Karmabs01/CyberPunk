@@ -159,10 +159,10 @@ function TimerBrands({
                     <div>
                 <div className="row align-items-center">
                     <div className="col-12 col-lg-12 mb-12 mb-lg-0">
-                        <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Top Picks")}</h2>
+                        <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Night City best offers")}</h2>
                     </div>
                 </div>
-                <div className=" rounded-md bg-white py-1 mt-10" data-aos="fade-up">
+                <div className=" rounded-3xl bg-white py-1 mt-10" data-aos="fade-up">
                     <div className="px-4 sm:px-6 lg:px-8">
                         {/* <div className="sm:flex sm:items-center">
                             <div className="sm:flex-auto">
@@ -196,7 +196,7 @@ function TimerBrands({
                                             <tr key={rowData["CasinoBrand"]}>
                                                 <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
                                                     <div className="h-11 w-11 flex-shrink-0">
-                                                        <img alt="" src={rowData["LinkImg"]} className="h-11 w-11 rounded-full" />
+                                                        <img alt="" src={rowData["LinkImg"]} className="h-11 w-11 rounded" />
                                                     </div>
                                                 </td>
                                                 <td className="py-4 pl-4 pr-3 text-sm font-bold text-gray-900 sm:pl-0">

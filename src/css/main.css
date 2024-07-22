@@ -597,23 +597,22 @@ nav {
   margin: 0 auto;
 }
 
-
-.hero .bground {
+.hero {
   background-color: #d61db7;
   background-image: url(../images/hero/hero-bg.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   position: relative;
+  min-height: 1000px;
   background-size: cover;
-  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 @media screen and (max-width: 767px) {
-  .hero .bground {
-    min-height: 60vh;
+  .hero {
+    min-height: 600px;
   }
 }
 .hero .bground:before {

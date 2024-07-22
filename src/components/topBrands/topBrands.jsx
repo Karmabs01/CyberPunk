@@ -98,11 +98,11 @@ function TopBrands({
       {filteredData.length > 0 && (
         <section className="trending py-5" id="experience">
           <div className="container">
-            <div className="row align-items-center">
+            {/* <div className="row align-items-center">
               <div className="col-12 col-lg-12 mb-12 mb-lg-0">
                 <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Top Picks")}</h2>
               </div>
-            </div>
+            </div> */}
             <OwlCarousel key={carouselKey} className='owl-carousel owl-theme' loop id="carouselTrending"  {...options} data-aos="fade-up">
 
               {filteredData.slice(0,6).map((rowData, index) => (

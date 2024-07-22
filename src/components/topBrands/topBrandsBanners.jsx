@@ -97,25 +97,25 @@ function TopBrandsBanners({
         <div>
             <section className="trending py-5" id="experience">
                 <div className="container">
-                    <div className="row align-items-center">
+                    {/* <div className="row align-items-center">
                         <div className="col-12 col-lg-12 mb-12 mb-lg-0">
                             <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Top Picks")}</h2>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="row align-items-center mt-10">
                         <div className="col-12 col-lg-6 mb-6 mb-lg-0 " data-aos="fade-right">
                             <Banner
-                                brand="Biggest jackpots"
+                                brand="Biggest jackpot"
                                 link="https://topbon.us"
-                                bonus="Up to 6000€ + 200 FS, min.dep 25€"
+                                bonus="Up to 6000€ + 150 FS, min.dep 25€"
                             />
 
                         </div>
                         <div className="col-12 col-lg-6 mb-6 mb-lg-0" data-aos="fade-left">
                             <Banner
-                                brand="Top offers"
+                                brand="Exclusive offer"
                                 link="https://topbon.us"
-                                bonus="Up to 6000€ + 200 FS, min.dep 25€"
+                                bonus="Up to 5000€ + 200 FS, min.dep 25€"
                             />
 
                         </div>
