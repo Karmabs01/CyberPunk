@@ -99,11 +99,11 @@ export default function Banner(brand) {
                             <h5 className="text-sm sm:text-xl ">{t(desc)}</h5>
 
                             {brand.image === "-1" ? (
-                                <h4 className="neon-pink text-lg sm:text-2xl ">
+                                <h4 className="neon-pink text-lg sm:text-2xl fix-height">
                                     <span> {brand.bonus} </span>
                                 </h4>
                             ) : (
-                                <h4 className="neon-pink text-lg sm:text-2xl">
+                                <h4 className="neon-pink text-lg sm:text-2xl mb-10">
                                     <span> {t(desc2)} </span>
                                 </h4>
                             )
