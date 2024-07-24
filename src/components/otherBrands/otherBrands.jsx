@@ -93,21 +93,21 @@ function OtherBrands({
   }
 
   return (
-    <div className="container">
+    <div className="container mb-10">
       {visibleData.length > 0 && (
         <div>
-          <div className="row align-items-center">
-            <div className="col-12 col-lg-12 mb-12 mb-lg-0">
+          <div className="row align-items-center mb-6">
+            <div className="col-12 col-lg-12 mb-lg-0">
               <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Cyber City Jackpot")}</h2>
             </div>
           </div>
-          <div className="rounded-md bg-gray-600/30 mt-10 mb-10">
-            <div className="collection-view grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 py-5 px-5 " data-aos="fade-up">
+          <div className="rounded-3xl bg-gray-900 mb-10">
+            <div className="collection-view grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 py-2.5 px-2.5 sm:py-5 sm:px-5 " data-aos="fade-up">
               {visibleData.map((rowData, index) => (
                 <a key={index} href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"}>
 
                   <div
-                    className="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white/60 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
+                    className="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-gray-900/50 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"
                   >
                     <div className="flex-shrink-0">
                       <img alt="" src={rowData["LinkImg"]} className="h-20 w-20 rounded" />
@@ -115,18 +115,18 @@ function OtherBrands({
                     <div className="min-w-0 flex-1">
                       <div className="focus:outline-none">
                         <span aria-hidden="true" className="absolute inset-0" />
-                        <div className="flex-1 text-m">
-                          <p className="text-m text-gray-500">{rowData["OurOfferContent"]}</p>
+                        <div className="flex-1 text-xl">
+                          <p className="text-sm sm:text-base text-white font-black">{rowData["OurOfferContent"]}</p>
                         </div>
                       </div>
                     </div>
                     <div className="flex-shrink-0 pr-2">
                       <button
                         type="button"
-                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-blue-400 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                       >
                         <span className="sr-only">Open options</span>
-                        <PlayCircleIcon aria-hidden="true" className="h-5 w-5" />
+                        <PlayCircleIcon aria-hidden="true" className="h-15 w-15" />
                       </button>
                     </div>
                   </div>

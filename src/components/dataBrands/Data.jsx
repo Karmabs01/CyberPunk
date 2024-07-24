@@ -201,7 +201,11 @@ function ChildComponent() {
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
     console.log("COUNTRY:", country)
-    i18n.changeLanguage(country);
+    if (country == "au" || country == "ca" || country == "ie" || country == "nz" || country == "usa") {
+      i18n.changeLanguage("all");
+    } else {
+      i18n.changeLanguage(country);
+    }
     localStorage.setItem("selectedCountry", country);
     document.documentElement.classList.remove("fixed-position");
     console.log("handleCountryChange")
@@ -230,15 +234,25 @@ function ChildComponent() {
 
   return (
     <div>
-      <AnotherBrands
+        <TopBrands
+        topComponentData={topComponentData}
+        newUrl={newUrl}
+        ipDataCode={ipDataCode}
+        currentLanguage={i18n.language}
+        source={source}
+        selectedCountry={selectedCountry}
+        setSelectedCountry={setSelectedCountry}
+      />
+
+      {/* <AnotherBrands
         anotherBrands={anotherBrands}
         newUrl={newUrl}
         ipDataCode={ipDataCode}
         currentLanguage={i18n.language}
         source={source}
         selectedCountry={selectedCountry}
-      />
-      <div className="select-brand container">
+      /> */}
+      <div className="select-brand container mt-2.5 mb-2.5">
         <Box sx={{ m: 1, minWidth: 300 }}>
           <FormControl fullWidth>
             <InputLabel>{t("select")}</InputLabel>
@@ -265,15 +279,6 @@ function ChildComponent() {
         </Box>
       </div>
 
-      <TopBrandsBanners
-        topComponentData={topComponentData}
-        newUrl={newUrl}
-        ipDataCode={ipDataCode}
-        currentLanguage={i18n.language}
-        source={source}
-        selectedCountry={selectedCountry}
-        setSelectedCountry={setSelectedCountry}
-      />
       <OtherBrands
         otherData={otherData}
         newUrl={newUrl}
@@ -285,7 +290,7 @@ function ChildComponent() {
         setSelectedCountry={setSelectedCountry}
       />
 
-      <TopBrands
+      <TopBrandsBanners
         topComponentData={topComponentData}
         newUrl={newUrl}
         ipDataCode={ipDataCode}
@@ -294,6 +299,7 @@ function ChildComponent() {
         selectedCountry={selectedCountry}
         setSelectedCountry={setSelectedCountry}
       />
+
 
       <TimerBrands
         newUrl={newUrl}

@@ -11,7 +11,18 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 const options = {
   loop: true,
   margin: 10,
-  items: 1
+  responsive: {
+    0: {
+      items: 1
+    },
+    768: {
+      items: 2
+    }
+  },
+  autoplay: true,
+  autoplayTimeout: 4000,
+  autoplaySpeed: 2000,
+  autoplayHoverPause: true
 };
 
 function TopBrands({
@@ -94,9 +105,9 @@ function TopBrands({
   }, [topComponentData, selectedCountry, ipDataCode, brandValue, currentLanguage]);
 
   return (
-    <div>
+    <div className="mt-28">
       {filteredData.length > 0 && (
-        <section className="trending py-5" id="experience">
+        <section className="trending" id="experience">
           <div className="container">
             {/* <div className="row align-items-center">
               <div className="col-12 col-lg-12 mb-12 mb-lg-0">
@@ -105,13 +116,14 @@ function TopBrands({
             </div> */}
             <OwlCarousel key={carouselKey} className='owl-carousel owl-theme' loop id="carouselTrending"  {...options} data-aos="fade-up">
 
-              {filteredData.slice(0,6).map((rowData, index) => (
+              {filteredData.slice(0, 6).map((rowData, index) => (
                 <Banner
                   brand={rowData["CasinoBrand"]}
                   link={rowData["GoBig"] + newUrl + "L_cyber-spin_1"}
                   bonus={rowData["OurOfferContent"]}
-                  image = "-1"
-                  key = {index}
+                  logo={rowData["LinkImg"]}
+                  image="-1"
+                  key={index}
                 />
               )
               )}

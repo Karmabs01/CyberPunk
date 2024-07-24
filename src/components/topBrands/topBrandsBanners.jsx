@@ -94,17 +94,17 @@ function TopBrandsBanners({
     }, [topComponentData, selectedCountry, ipDataCode, brandValue, currentLanguage]);
 
     return (
-        <div>
+        <div className="mb-10">
             {filteredData.length > 0 && (
 
-                <section className="trending py-5" id="experience">
+                <section className="trending" id="experience">
                     <div className="container">
                         {/* <div className="row align-items-center">
                         <div className="col-12 col-lg-12 mb-12 mb-lg-0">
                             <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Top Picks")}</h2>
                         </div>
                     </div> */}
-                        <div className="row align-items-center mt-10">
+                        <div className="row align-items-center">
                             <div className="col-12 col-lg-6 mb-6 mb-lg-0 " data-aos="fade-right">
                                 {filteredData.slice(0, 1).map((rowData, index) => (
                                     <Banner

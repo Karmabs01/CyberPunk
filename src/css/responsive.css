@@ -142,37 +142,7 @@
   .top-brand .other-brands {
     padding-bottom: 20px;
   }
-  .banner {
-    padding: 0 15px;
-    width: 95%;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-  .banner h3 {
-    font-size: 32px;
-  }
-  .App .unsubscribed {
-    min-height: calc(100vh - 250px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #myIframe22 {
-    width: 100% !important;
-    height: 250px !important;
-  }
-  .banner__shape__img img {
-    max-width: 400px;
-    width: 100%;
-    height: auto !important;
-  }
-  .banner__content h3 {
-    line-height: 33px;
-  }
-  .mdd0 {
-    height: auto;
-    margin-top: 30px;
-  }
+ 
   .game__two {
     padding-top: 0 !important;
   }
@@ -195,21 +165,7 @@
     font-weight: 900;
   }
   /* #084298 */
-  .banner__section .banner__shape__img {
-    width: 100%;
-    height: fit-content;
-    display: block;
-  }
-  .col-xxl-6.col-xl-6.col-lg-3 {
-    opacity: 0;
-  }
-  .all-cars {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .all-cars .col-xxl-4 {
-    width: 50%;
-  }
+ 
 
   .cards-content {
     display: flex;
@@ -280,63 +236,7 @@
     margin-right: auto;
     flex-direction: column !important;
   }
-  .doublebrands .banner-slot1 {
-    /* background: url(/public/slot_orange.png) no-repeat left center; */
-    background-position: left center;
-    height: initial;
-  }
-  .doublebrands .banner-slot2 {
-    margin-top: 20px;
-    /* background: url(/public/slot_blue.png) no-repeat left center; */
-    background-position: left center;
-    height: initial;
-  }
-  .doublebrands .another-brands .other-brands .all-brands .one-brand {
-    flex-basis: 42%;
-    margin-right: 0;
-  }
-  .doublebrands .another-brands .other-brands .all-brands {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .banner-slot1 .banner-text h3,
-  .banner-slot2 .banner-text h3 {
-    padding-left: 0;
-    font-size: 35px;
-  }
-  .banner-slot1 .banner-text,
-  .banner-slot2 .banner-text {
-    margin-right: 0;
-  }
-  .withdrawal-form #amount {
-    min-width: 226px;
-    box-sizing: border-box;
-  }
-  .withdrawal .ui-methods .menu-info {
-    overflow: hidden;
-  }
-  .flex.menu-content {
-    overflow: hidden;
-  }
-  .withdrawal-form {
-    overflow: hidden;
-  }
-  .menu-content .overflow {
-    /* -moz-box-sizing: border-box; 
-      -webkit-box-sizing: border-box;  */
-    width: 100% !important;
-    max-width: 100vw !important;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  }
-  .overflow .modal {
-    width: 100% !important;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    max-width: 345px !important;
-  }
+  
   #myIframe {
     width: 100% !important;
     height: 250px !important;
@@ -534,11 +434,6 @@
   .mobile .btn-primary {
     position: relative;
   }
-  .select-brand {
-    max-width: 95% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
   .mobile .flex:nth-child(3n + 1) {
     background: linear-gradient(334deg, #ca4e46 11.94%, #ffa149 116.91%);
   }
@@ -607,36 +502,7 @@
   .list-menu a span {
     margin-left: 4px;
   }
-  .banner {
-    background: url(../public/fwb.png) no-repeat center;
-    background-size: cover;
-    padding: 15px;
-  }
-  .banner p {
-    font-size: 28px;
-  }
-  .banner .btn-primary {
-    font-size: 13px !important;
-  }
-  .center-footer {
-    flex-direction: column;
-  }
-  .center-footer .images {
-    justify-content: center;
-    margin-top: 10px;
-  }
-  .center-footer p {
-    margin-left: 0;
-  }
-  .center-footer .images img {
-    margin-right: 0;
-  }
-  .withdrawal .ui-methods {
-    padding: 25px 0;
-  }
-  .ui-methods .flex {
-    flex-direction: column;
-  }
+ 
   .withdrawal .ui-methods .container {
     width: 95%;
     margin: 0 auto;
@@ -752,10 +618,6 @@
   }
   .wrapper .container img:not(.other-brands-content img) {
     margin-top: 0;
-  }
-  .banner1,
-  .banner2 {
-    display: none;
   }
   .other-brands .container h2 {
     font-size: 17px;
@@ -1212,26 +1074,7 @@
   .footer__section .shape__right {
     display: none;
   }
-  .banner__thumb {
-    width: 100%;
-    position: relative;
-  }
-  .banner__thumb img {
-    width: 100%;
-    height: 100%;
-  }
-  .banner__content h3 {
-    margin-bottom: 0px;
-    font-size: 27px;
-  }
-  .banner__content h1 {
-    margin-bottom: 5px;
-    line-height: 44px;
-  }
-  .banner__content h4 {
-    margin-bottom: 20px;
-    font-size: 22px;
-  }
+
   .register__modal {
     z-index: 9999999;
   }

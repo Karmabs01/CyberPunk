@@ -34,7 +34,6 @@ const resources = {
   all: {
     translation: translationEN,
   },
-
   pl: {
     translation: translationPL,
   },

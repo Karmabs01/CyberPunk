@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 48px;
 }
 
 .select-brand select {
@@ -32,6 +31,14 @@
   color: var(--select-country-color) !important;
 }
 
+.select-brand .MuiSelect-select {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: var(--font-color) !important;
+  font-size: 20px !important;
+  position: relative;
+}
 
 .select-brand .MuiSvgIcon-root {
   fill: var(--select-country-color) !important;

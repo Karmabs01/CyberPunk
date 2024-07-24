@@ -28,6 +28,9 @@ function TimerBrands({
 
     const dateTime = NOW_IN_MS + DAYS_IN_MS;
 
+    const buttonText = (window.innerWidth <= 600) ? "Play" : "Play now!"
+
+
     const handleShowMore = () => {
         setVisibleBrands((prevVisibleBrands) => prevVisibleBrands + 8);
     };
@@ -136,7 +139,7 @@ function TimerBrands({
 
                     // Если нет брендов, вызывать setSelectedCountry
                     if (filteredDataOther.length === 0) {
-                      setSelectedCountry("all");
+                        setSelectedCountry("all");
                     }
                 } else {
                     console.error("Failed to fetch data:", res.status);
@@ -153,78 +156,81 @@ function TimerBrands({
     }, [ipDataCode, currentLanguage, selectedCountry, source]);
 
     return (
-        <div>
-            <section id="table" className="table-section container mb-10">
-                {otherData.length > 0 && (
-                    <div>
-                <div className="row align-items-center">
-                    <div className="col-12 col-lg-12 mb-12 mb-lg-0">
-                        <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Night City best offers")}</h2>
+        <div id="table" className="table-section container mb-10">
+            {otherData.length > 0 && (
+                <div>
+                    <div className="row align-items-center  mb-6">
+                        <div className="col-12 col-lg-12 mb-lg-0">
+                            <h2 className="display-1 font-black heading" data-aos="fade-up">{t("Player’s Choice")}</h2>
+                        </div>
                     </div>
-                </div>
-                <div className=" rounded-3xl bg-white py-1 mt-10" data-aos="fade-up">
-                    <div className="px-4 sm:px-6 lg:px-8">
-                        {/* <div className="sm:flex sm:items-center">
+                    <div className=" rounded-3xl bg-gray-900 py-1" data-aos="fade-up">
+                        <div className="px-4 sm:px-6 lg:px-8">
+                            {/* <div className="sm:flex sm:items-center">
                             <div className="sm:flex-auto">
                                 <h1 className="text-base font-semibold leading-6 text-gray-700">Top offers</h1>
                             </div>
                         </div> */}
-                        <div className="-mx-4 mt-8 sm:-mx-0">
-                            <table className="min-w-full divide-y divide-gray-300">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-                                            Brand
-                                        </th>
-                                        <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">
-                                            <span className="sr-only">BrandName</span>
+                            <div className="-mx-4 sm:-mx-0">
+                                <table className="min-w-full divide-y divide-gray-300">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" className="py-3.5 pl-4 pr-3 text-left sm:text-xl font-semibold text-white sm:pl-0">
+                                                Brand
+                                            </th>
+                                            <th scope="col" className="py-3.5 pl-4 pr-3 text-left sm:text-xl font-semibold text-white sm:pl-0">
+                                                <span className="sr-only">BrandName</span>
 
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="hidden px-3 py-3.5 text-left text-sm font-semibold text-gray-900 lg:table-cell"
-                                        >
-                                            Bonus
-                                        </th>
-                                        <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0">
-                                            <span className="sr-only">Play</span>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-gray-200 bg-white">
+                                            </th>
+                                            <th
+                                                scope="col"
+                                                className="hidden px-3 py-3.5 text-left sm:text-xl font-semibold text-white lg:table-cell"
+                                            >
+                                                Bonus
+                                            </th>
+                                            <th scope="col" className="py-3.5 pl-4 pr-3 text-left sm:text-xl font-semibold text-white sm:pl-0">
+                                                <span className="sr-only">BrandName</span>
+
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-500 bg-gray-900/60 rounded">
                                         {otherData.slice(0, 8).map((rowData) => (
                                             <tr key={rowData["CasinoBrand"]}>
-                                                <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                                <td className="py-4 pl-4 pr-3 text-sm sm:text-xl font-medium  text-white sm:pl-0">
                                                     <div className="h-11 w-11 flex-shrink-0">
                                                         <img alt="" src={rowData["LinkImg"]} className="h-11 w-11 rounded" />
                                                     </div>
                                                 </td>
-                                                <td className="py-4 pl-4 pr-3 text-sm font-bold text-gray-900 sm:pl-0">
+                                                <td className="py-4 pl-4 pr-3 text-sm sm:text-xl text-white sm:pl-0 tracking-widest">
                                                     {rowData["CasinoBrand"]}
                                                     <dl className="font-normal sm:hidden">
-                                                        <dd className="text-gray-700">{rowData["OurOfferContent"]}</dd>
+                                                        <dd className="text-sm sm:text-xl text-white ">{rowData["OurOfferContent"]}</dd>
                                                     </dl>
                                                 </td>
-                                                <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{rowData["OurOfferContent"]}</td>
-                                                <td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                                                    <a href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"} className="text-indigo-600 hover:text-indigo-900">
-                                                        Play<span className="sr-only">,{rowData["CasinoBrand"]}</span>
+                                                <td className="hidden px-3 py-4 text-sm sm:text-xl text-white  sm:table-cell">{rowData["OurOfferContent"]}</td>
+                                                <td className=" pl-3 pr-4 text-right text-sm sm:text-xl font-medium sm:pr-0">
+                                                    <a href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"} target="blank_"
+                                                        className="inline-flex items-center text-center rounded-md bg-blue-400/10 px-3 sm:px-5 py-2.5 text-sm sm:text-xl font-medium text-blue-400 ring-1 ring-inset ring-blue-400 hover:bg-blue-400/70 hover:text-white">
+
+                                                        {buttonText}<span className="sr-only">,{rowData["CasinoBrand"]}</span>
                                                     </a>
                                                 </td>
+
                                             </tr>
                                         ))}
-                                    
 
 
-                                </tbody>
-                            </table>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    </div>
                 </div>
-                 )}
-            </section >
-        </div>
+            )}
+        </div >
 
 
     );

@@ -28,7 +28,7 @@
   --black-color: #000000;
 
   --header-background-color: #000000;
-  --background-color: #249696a1;
+  --background-color: #003636c7;
   --footer-background-color: #000000;
 
   --header-font-color: #ffffff;
@@ -66,26 +66,8 @@
   overflow: hidden;
 }
 
-.MuiSelect-select {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  color: var(--font-color) !important;
-  font-size: 20px !important;
-  position: relative;
-}
-
 .MuiIconButton-root {
   background-color: #ffffff !important;
-}
-
-header .MuiSelect-select {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  color: var(--header-font-color) !important;
-  font-size: 20px !important;
-  position: relative;
 }
 
 .MuiMenu-list {
@@ -183,7 +165,6 @@ h6 {
   color: var(--font-color) !important;
   line-height: 60px;
   line-height: inherit;
-  margin-bottom: 30px;
 }
 
 h1 a,
@@ -489,7 +470,7 @@ p {
   --primary-hue: 0;
   --primary-lightness: 50;
   --color: hsl(0, 0%, 100%);
-  --font-size: 26px;
+  --font-size: 20px;
   --shadow-primary-hue: 180;
   --label-size: 9px;
   --shadow-secondary-hue: 60;
@@ -595,8 +576,8 @@ p {
   font-weight: 700;
   border: 0;
   min-width: 300px;
-  height: 75px;
-  line-height: 75px;
+  height: 55px;
+  line-height: 55px;
   transition: background 0.2s;
 }
 
@@ -898,63 +879,47 @@ p {
   width: 70px;
 }
 
-.cmn--btn {
-  padding: 10px 30px 12px;
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 600;
-  display: inline-block;
-  color: var(--white-color) !important;
-  text-transform: capitalize;
-  transition: all 0.3s;
-  font-family: "Jost", sans-serif;
-  text-align: center;
-  background: #6b6b6b;
-  border-radius: 25px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s;
-  margin-bottom: 20px;
-  z-index: 1;
-}
-
-.cmn--btn::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  background: linear-gradient(114.26deg, #d61db7 13.41%, #046666 87.24%);
-  height: 100%;
-  width: 0px;
-  transition: all 0.4s;
-}
-.cmn--btn:hover {
-  background: linear-gradient(114.26deg, #062727 13.41%, #012020 87.24%);
-}
-.cmn--btn:hover {
-  color: var(--theme-color) !important;
-}
-.cmn--btn:hover span {
-  color: var(--white-color);
-}
-.cmn--btn span {
-  z-index: 1;
-  position: relative;
-  transition: all 0.4s;
-}
-
 .neon-blue {
-  color: #d3ffff !important;
-  -moz-text-shadow: 0 0 20px #42ffff;
-  -webkit-text-shadow: 0 0 20px #42ffff;
-  text-shadow: 0 0 20px #42ffff;
+  color: #a7f9ff !important;
+  -moz-text-shadow: 0 0 10px #00fff2;
+  -webkit-text-shadow: 0 0 10px #00fff2;
+  text-shadow: 0 0 10px #00fff2;
+  line-height: normal !important;
+  /* font-size: 30px; */
+  text-transform: capitalize;
+}
+
+.banner h5 {
+  /* font-size: 18px !important; */
+  margin-bottom: 15px !important;
+  margin-top: 15px;
 }
 
 .neon-pink span {
-  color: #ffa4f7 !important;
-  -moz-text-shadow: 0 0 20px #ff00ea;
-  -webkit-text-shadow: 0 0 20px #ff00ea;
-  text-shadow: 0 0 20px #ff00ea;
+  color: #ffb0f8 !important;
+  -moz-text-shadow: 0 0 10px #ff85f5;
+  -webkit-text-shadow: 0 0 10px #ff85f5;
+  text-shadow: 0 0 10px #ff85f5;
+  /* font-size: 24px; */
+}
+
+@media (min-width: 370px) and (max-width: 768px) {
+  .neon-blue {
+    /* font-size: 25px; */
+  }
+
+  .banner h5 {
+    /* font-size: 18px !important; */
+    margin-bottom: 15px !important;
+  }
+  
+  .neon-pink span {
+    /* font-size: 20px; */
+  }
+  .neon-pink {
+    margin-bottom: 15px !important;
+
+  }
 }
 
 .owl-theme .owl-dots .owl-dot.active span,
@@ -964,8 +929,8 @@ p {
 
 @media (min-width: 992px) and (max-width: 3000px) {
   .banner span {
-    min-height: 150px;
-    max-height: 150px;
+    min-height: 100px;
+    max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -976,3 +941,16 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
+
+.banner-logo {
+  height: 50px !important;
+  width: 50px !important;
+  margin-right: 20px;
+}
+
+@media (min-width: 370px) and (max-width: 768px) {
+  .display-1 {
+    font-size: 30px !important;
+  }
+}
+
