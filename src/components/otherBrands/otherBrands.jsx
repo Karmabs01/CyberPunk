@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import React, { useEffect, useState } from 'react';
 import { PlayCircleIcon } from '@heroicons/react/20/solid'
+import play from "../../img/play.png"
 
 function OtherBrands({
   otherData = [],
@@ -126,7 +127,8 @@ function OtherBrands({
                         className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-blue-400 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                       >
                         <span className="sr-only">Open options</span>
-                        <PlayCircleIcon aria-hidden="true" className="h-15 w-15" />
+                        {/* <PlayCircleIcon aria-hidden="true" className="h-15 w-15" /> */}
+                        <img src={play} alt="play" />
                       </button>
                     </div>
                   </div>
