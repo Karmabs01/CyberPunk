@@ -120,7 +120,7 @@ function OtherBrands({
                         </div>
                       </div>
                     </div>
-                    <div className="flex-shrink-0 pr-2">
+                    <div className="flex shrink-0 pr-2">
                       <button
                         type="button"
                         className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-blue-400 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
