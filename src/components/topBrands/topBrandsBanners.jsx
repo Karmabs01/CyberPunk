@@ -30,8 +30,31 @@ function TopBrandsBanners({
 
     const [carouselKey, setCarouselKey] = useState(0);
     const [filteredData, setFilteredData] = useState([]);
+    const [redirectUrl, setRedirectUrl] = useState("");
 
     const geo = selectedCountry.toUpperCase();
+
+    useEffect(() => {
+        let url = "";
+        switch (source) {
+          case "partner1039":
+            url = "https://info.topbon.us/partner_aurnd";
+            break;
+          case "partner1043":
+            url = "https://info.topbon.us/rnd1043";
+            break;
+          case "partner1044":
+            url = "https://info.topbon.us/rnd1044";
+            break;
+          case "CLD_VIP":
+            url = "https://link.bo-nus.com/rnd_cld";
+            break;
+          default:
+            url = "https://info.topbon.us/aurnd";
+        }
+        setRedirectUrl(url);
+      }, [source]);
+      console.log("SOURCE: URL: ", redirectUrl)
 
     useEffect(() => {
         let newFilteredData = [];
@@ -67,7 +90,6 @@ function TopBrandsBanners({
                     rowData["Trendsetting"] === "1"
             );
         }
-
         const newTopData = topComponentData
             .filter((rowData) => rowData.Tech === brandValue)
             .map((item) => ({
@@ -110,8 +132,8 @@ function TopBrandsBanners({
                                     <Banner
                                         key={index}
                                         brand="Biggest jackpot"
-                                        link="https://topbon.us"
-                                        bonus={rowData["OurOfferContent"]}
+                                        link={`${redirectUrl}/${newUrl}&creative_id=Cyber_random`}
+                                        bonus=""
                                         image = "0"
                                     />
                                 ))
@@ -122,8 +144,8 @@ function TopBrandsBanners({
                                     <Banner
                                         key={index+1}
                                         brand="Exclusive offer"
-                                        link="https://topbon.us"
-                                        bonus={rowData["OurOfferContent"]}
+                                        link={`${redirectUrl}/${newUrl}&creative_id=Cyber_random`}
+                                        bonus=""
                                         image = "4"
 
                                     />

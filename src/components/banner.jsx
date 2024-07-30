@@ -125,7 +125,7 @@ export default function Banner(brand) {
                         ) : (
                             <div className="flex flex-row items-center justify-center">
                                 <a
-                                    href="http://topbon.us"
+                                    href={brand.link}
                                     target="blank_"
                                     className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-xl font-black text-pink-400 ring-1 ring-inset ring-pink-400 hover:bg-pink-400/70 hover:text-white"
                                 >

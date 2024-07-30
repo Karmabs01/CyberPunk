@@ -234,7 +234,7 @@ function ChildComponent() {
 
   return (
     <div>
-        <TopBrands
+      <TopBrands
         topComponentData={topComponentData}
         newUrl={newUrl}
         ipDataCode={ipDataCode}
@@ -312,7 +312,9 @@ function ChildComponent() {
       />
 
 
-      <CTA />
+      <CTA
+        newUrl={newUrl}
+      />
     </div>
   );
 }
