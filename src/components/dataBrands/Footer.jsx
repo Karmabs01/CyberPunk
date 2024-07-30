@@ -9,33 +9,34 @@ import { useTranslation } from "react-i18next";
 
 function ChildComponent() {
 
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    return (
-        <footer>
-          <div className="wrapper">
-            <div className="container flex-column">
-              <div className="top-footer">
-                <img className="logo" src={`.${logo}`} />
-              
-              </div>
-              <div className="center-footer">
-                <div className="images">
-                  <img src={`.${plus}`} alt="" />
-                  {/* <img src={`.${gamblers}`} alt="" /> */}
-                  <img src={`.${layer}`} alt="" />
-                  {/* <img src={`.${softswiss}`} alt="" /> */}
-                </div>
-
-                <p>{t("footerText")}</p>
-              </div>
+  return (
+    <footer>
+      <div className="wrapper">
+        <div className="container flex-column">
+          <div className="top-footer">
+            <a target="_blank" href="https://topbon.us/">
+              <img className="logo" src={`.${logo}`} />
+            </a>
+          </div>
+          <div className="center-footer flex flex-col items-center sm:flex-row">
+            <div className="images mr-10">
+              <img src={`.${plus}`} alt="" />
+              {/* <img src={`.${gamblers}`} alt="" /> */}
+              <img src={`.${layer}`} alt="" />
+              {/* <img src={`.${softswiss}`} alt="" /> */}
             </div>
+
+            <p>{t("footerText")}</p>
           </div>
-          <div className="container">
-            <div className="bottom-footer">{t("copyright")} <a target="_blank" href="https://topbon.us/">topbon.us</a> {t("copyright2")}</div>
-          </div>
-        </footer>
-    );
+        </div>
+      </div>
+      <div className="container">
+        <div className="bottom-footer">{t("copyright")} <a target="_blank" href="https://topbon.us/">topbon.us</a> {t("copyright2")}</div>
+      </div>
+    </footer>
+  );
 }
 
 export default ChildComponent;

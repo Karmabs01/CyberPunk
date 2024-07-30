@@ -1,7 +1,7 @@
 import heroPic from "../images/hero/about.jpg";
 import { useTranslation } from "react-i18next";
 
-export default function CTA() {
+export default function CTA({newUrl}) {
   const { t } = useTranslation();
 
   return (
@@ -32,7 +32,8 @@ export default function CTA() {
                 Enter the Realm
               </a> */}
 
-              <a target="_blank" href="https://topbon.us">
+              <a href={"https://topbon.us/"} target="blank_">
+              {/* <a href={"https://topbon.us/" + newUrl} target="blank_"> */}
                 <button className="cybr-btn"> {t("Follow us")}<span aria-hidden>_</span>
                   <span aria-hidden className="cybr-btn__glitch">{t("Let's go")}</span>
                   <span aria-hidden className="cybr-btn__tag">R25</span>

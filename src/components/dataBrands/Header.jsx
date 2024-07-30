@@ -186,7 +186,7 @@ function ChildComponent() {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <Link className="flex" to={`/${newUrl}`}>
+        <Link className="flex" target="_blank" to={`https://topbon.us/${newUrl}`}>
           <img className="logo" src={`.${logo}`} />
         </Link>
         {!isMobile ? (

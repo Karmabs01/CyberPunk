@@ -119,7 +119,7 @@ export default function Banner(brand) {
                                     target="blank_"
                                     className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-lg font-medium text-blue-400 ring-1 ring-inset ring-blue-400 hover:bg-blue-400/70 hover:text-white"
                                 >
-                                    Try your luck!
+                                    Play Now!
                                 </a>
                             </div>
                         ) : (
