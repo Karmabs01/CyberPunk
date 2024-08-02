@@ -28,7 +28,7 @@ function TimerBrands({
 
     const dateTime = NOW_IN_MS + DAYS_IN_MS;
 
-    const buttonText = (window.innerWidth <= 600) ? "Play" : "Play now!"
+    const buttonText = (window.innerWidth <= 600) ? "Play" : "Play Now"
 
 
     const handleShowMore = () => {
@@ -105,7 +105,7 @@ function TimerBrands({
                                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                                rowData["High_hybrid"] === "1"
+                                rowData["FirstPriority"] === "1"
                         );
                     } else {
                         filteredDataOther = responseData.brandsNew.filter(
@@ -115,7 +115,7 @@ function TimerBrands({
                                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                                rowData["High_hybrid"] === "1"
+                                rowData["FirstPriority"] === "1"
                         );
                     }
                     if (geo === "ALL") {
@@ -126,12 +126,10 @@ function TimerBrands({
                                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                                // rowData["FirstPriority"] === "1"
-                                rowData["Trendsetting"] === "1"
+                                rowData["Segment2"] !== ""
 
                         );
                     }
-
 
                     // Перемешиваем данные перед отображением
                     setOtherData(shuffleArray(filteredDataOther));
@@ -211,10 +209,10 @@ function TimerBrands({
                                                 </td>
                                                 <td className="hidden px-3 py-4 text-sm sm:text-xl text-white  sm:table-cell">{rowData["OurOfferContent"]}</td>
                                                 <td className=" pl-3 pr-4 text-right text-sm sm:text-xl font-medium sm:pr-0">
-                                                    <a href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"} target="blank_"
+                                                    <a href={rowData["GoBig"] + newUrl + "L_cyber_players_choise"} target="blank_"
                                                         className="inline-flex items-center text-center rounded-md bg-blue-400/10 px-3 sm:px-5 py-2.5 text-sm sm:text-xl font-medium text-blue-400 ring-1 ring-inset ring-blue-400 hover:bg-blue-400/70 hover:text-white">
 
-                                                        {buttonText}<span className="sr-only">,{rowData["CasinoBrand"]}</span>
+                                                        {t(buttonText)}<span className="sr-only">,{rowData["CasinoBrand"]}</span>
                                                     </a>
                                                 </td>
 

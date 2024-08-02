@@ -94,7 +94,7 @@ function AnotherBrands({
               <div className="group mt-5 btn-wrap">
                 {otherData.length > 0 ? (
                   otherData.slice(0, 1).map((rowData, index) => (
-                    <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_vegas_random"}>
+                    <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_cyber_random"}>
                       <button className="cybr-btn"> {t("Try Your Luck!")}<span aria-hidden>_</span>
                         <span aria-hidden className="cybr-btn__glitch">{t("Lets see!")}</span>
                         <span aria-hidden className="cybr-btn__tag">R25</span>

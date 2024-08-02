@@ -18,11 +18,10 @@ export default function CTA({newUrl}) {
         </div>
         <div className="relative mx-auto max-w-7xl py-10 " data-aos="fade-left">
           <div className="pl-6 pr-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-2/3 lg:pl-24 lg:pr-0 xl:pl-32">
-            <h2 className="text-base font-semibold leading-7 text-indigo-400">Unlock a Universe of Endless Possibilities</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Discover More Brands, Articles, Tutorials, and Updates</p>
+            <h2 className="text-base font-semibold leading-7 text-indigo-400">{t("Unlock a Universe of Endless Possibilities")}</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">{t("Discover More Brands, Articles, Tutorials, and Updates")}</p>
             <p className="mt-6 text-base leading-7 text-gray-300">
-              Our main site offers an extensive collection of top-tier brands, in-depth articles, and comprehensive tutorials to enhance your gaming experience.
-              Stay updated with the latest news and updates in the world of gaming.
+              {t("Our main site offers an extensive collection of top-tier brands, in-depth articles, and comprehensive tutorials to enhance your gaming experience. Stay updated with the latest news and updates in the world of gaming.")}
             </p>
             <div className="mt-8 flex flex-row items-center justify-center">
               {/* <a

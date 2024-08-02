@@ -13,19 +13,13 @@ import { useTranslation } from "react-i18next";
 const images = [heroPic1, heroPic2, heroPic3, heroPic4, heroPic5, heroPic6, heroPic7, heroPic8, heroPic9]
 
 const description = [
-    "Experience the ultimate cyberpunk thrills. Dive into neon-lit streets and immerse yourself in high-stakes fun and excitement.",
-    "Step into a world where luck shines brighter than neon. Embrace the thrill, feel the rush, and win big at our exciting casino!",
-    "Unlock the hidden treasures of tomorrow. Play and experience next-level gaming excitement like never before.",
-    "Feel the electrifying pulse of big wins. High-voltage games and massive jackpots are waiting just for you.",
-    "High-tech innovation meets high stakes. Dive into a world of futuristic wins and endless possibilities.",
-    "Where the future meets fortune. Enjoy electrifying games and endless winning opportunities at every turn.",
-    "Discover a casino experience like no other. Neon lights, big wins, and endless excitement are just a click away.",
-    "The future of gaming is here. Join us for a chance to win big in a dazzling, neon-lit world of excitement.",
-    "Feel the beat of big wins and let your luck shine through. Claim your fortune today and enjoy unparalleled excitement!",
-    "A casino that redefines the meaning of winning. Enjoy thrilling games and electrifying jackpots like never before.",
-    "Step into the electric atmosphere of our casino. Unleash your luck and enjoy big wins with every game you play.",
-    "Where every spin is charged with excitement. Ignite your fortune, spin the reels, and play now for big rewards.",
-    "Pulse-pounding action awaits at our casino. Spin the reels and let the neon lights guide you to victory and fortune."
+    "The week's biggest jackpot awaits! With a prize pool that could change your life, take your chance to hack the system and hit the ultimate payout.",
+    "Claim your exclusive welcome bonus! Double your credits and dive into a universe of electrifying games.",
+    "Join VIP High-Roller Club. Enjoy next-level rewards, instant withdrawals, and your own personal guide through the cyber world.",
+    "Experience the thrill of Live Casino, where you can interact with real dealers in a high-tech setting.",
+    "Play and win big today! Cyber slots and massive jackpots await you. Every spin brings you closer to the big win.",
+    "Unleash your luck at the cyber tables. Bet big, win bigger. Experience the ultimate thrill of winning.",
+    "Level up your gaming experience! Exclusive rewards for loyal players. Every game brings you closer to greatness."
 ]
 
 const action = [
@@ -90,13 +84,13 @@ export default function Banner(brand) {
                                     </h1>
                                 </div>
                             ) : (
-                                <h1 className="neon-blue  text-lg sm:text-3xl ">
+                                <h1 className="neon-blue text-lg sm:text-3xl">
                                     {t(brand.brand)}
                                 </h1>
                             )
 
                             }
-                            <h5 className="text-sm sm:text-xl ">{t(desc)}</h5>
+                            <h5 className="text-sm sm:text-xl fix-height">{t(desc)}</h5>
 
                             {brand.image === "-1" ? (
                                 <h4 className="neon-pink text-lg sm:text-2xl fix-height">
@@ -108,9 +102,6 @@ export default function Banner(brand) {
                                 </h4>
                             )
                             }
-
-
-
                         </blockquote>
                         {brand.image === "-1" ? (
                             <div className="flex flex-row items-center justify-center">
@@ -119,7 +110,7 @@ export default function Banner(brand) {
                                     target="blank_"
                                     className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-lg font-medium text-blue-400 ring-1 ring-inset ring-blue-400 hover:bg-blue-400/70 hover:text-white"
                                 >
-                                    Play Now!
+                                    {t("Play Now")}
                                 </a>
                             </div>
                         ) : (
@@ -129,7 +120,7 @@ export default function Banner(brand) {
                                     target="blank_"
                                     className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-xl font-black text-pink-400 ring-1 ring-inset ring-pink-400 hover:bg-pink-400/70 hover:text-white"
                                 >
-                                    Try your luck!
+                                    {t("Try Your Luck!")}
                                 </a>
                             </div>
                         )

@@ -105,7 +105,7 @@ function OtherBrands({
           <div className="rounded-3xl bg-gray-900 mb-10">
             <div className="collection-view grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 py-2.5 px-2.5 sm:py-5 sm:px-5 " data-aos="fade-up">
               {visibleData.map((rowData, index) => (
-                <a key={index} href={rowData["GoBig"] + newUrl + "L_cyber-spin_1"}>
+                <a key={index} href={rowData["GoBig"] + newUrl + "L_cyber_jackpot"}>
 
                   <div
                     className="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-gray-900/50 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400"

@@ -119,7 +119,7 @@ function TopBrands({
               {filteredData.slice(0, 6).map((rowData, index) => (
                 <Banner
                   brand={rowData["CasinoBrand"]}
-                  link={rowData["GoBig"] + newUrl + "L_cyber-spin_1"}
+                  link={rowData["GoBig"] + newUrl + "L_cyber_banners_carousel"}
                   bonus={rowData["OurOfferContent"]}
                   logo={rowData["LinkImg"]}
                   image="-1"

@@ -117,22 +117,15 @@ function TopBrandsBanners({
 
     return (
         <div className="mb-10">
-            {filteredData.length > 0 && (
-
                 <section className="trending" id="experience">
                     <div className="container">
-                        {/* <div className="row align-items-center">
-                        <div className="col-12 col-lg-12 mb-12 mb-lg-0">
-                            <h2 className="display-1 font-black mb-3 heading" data-aos="fade-up">{t("Top Picks")}</h2>
-                        </div>
-                    </div> */}
                         <div className="row align-items-center">
                             <div className="col-12 col-lg-6 mb-6 mb-lg-0 " data-aos="fade-right">
                                 {filteredData.slice(0, 1).map((rowData, index) => (
                                     <Banner
                                         key={index}
                                         brand="Biggest jackpot"
-                                        link={`${redirectUrl}/${newUrl}&creative_id=Cyber_random`}
+                                        link={`${redirectUrl}/${newUrl}&creative_id=L_cyber_random_jackpot`}
                                         bonus=""
                                         image = "0"
                                     />
@@ -144,7 +137,7 @@ function TopBrandsBanners({
                                     <Banner
                                         key={index+1}
                                         brand="Exclusive offer"
-                                        link={`${redirectUrl}/${newUrl}&creative_id=Cyber_random`}
+                                        link={`${redirectUrl}/${newUrl}&creative_id=L_cyber_random_offer`}
                                         bonus=""
                                         image = "4"
 
@@ -155,7 +148,6 @@ function TopBrandsBanners({
                         </div>
                     </div>
                 </section>
-            )}
         </div>
     );
 }
