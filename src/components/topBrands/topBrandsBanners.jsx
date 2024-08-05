@@ -38,20 +38,21 @@ function TopBrandsBanners({
         let url = "";
         switch (source) {
           case "partner1039":
-            url = "https://info.topbon.us/partner_aurnd";
+            url = "https://link.reg2dep.business/topbonus_rnd39";
             break;
           case "partner1043":
-            url = "https://info.topbon.us/rnd1043";
+            url = "https://link.reg2dep.business/topbonus_rnd43";
             break;
           case "partner1044":
-            url = "https://info.topbon.us/rnd1044";
+            url = "https://link.reg2dep.business/topbonus_rnd44";
             break;
           case "CLD_VIP":
-            url = "https://link.bo-nus.com/rnd_cld";
+            url = "https://link.reg2dep.business/topbonus_rndcld";
             break;
           default:
-            url = "https://info.topbon.us/aurnd";
+            url = "https://link.reg2dep.business/topbonus_rnd";
         }
+        
         setRedirectUrl(url);
       }, [source]);
       console.log("SOURCE: URL: ", redirectUrl)

@@ -39,10 +39,16 @@ function getRandomBackground() {
     const randomIndex = Math.floor(Math.random() * totalImages) + 1;
     return images[randomIndex];
 }
+let lastIndex = null;
 
 function getRandomDescription(data) {
-    const total = data.length - 1;
-    const randomIndex = Math.floor(Math.random() * total) + 1;
+    const total = data.length;
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * total);
+    } while (randomIndex === lastIndex);
+    
+    lastIndex = randomIndex;
     return data[randomIndex];
 }
 
