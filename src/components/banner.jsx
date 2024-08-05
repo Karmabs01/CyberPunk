@@ -47,7 +47,7 @@ function getRandomDescription(data) {
     do {
         randomIndex = Math.floor(Math.random() * total);
     } while (randomIndex === lastIndex);
-    
+
     lastIndex = randomIndex;
     return data[randomIndex];
 }
@@ -114,9 +114,12 @@ export default function Banner(brand) {
                                 <a
                                     href={brand.link}
                                     target="blank_"
-                                    className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-lg font-medium text-blue-400 ring-1 ring-inset ring-blue-400 hover:bg-blue-400/70 hover:text-white"
                                 >
-                                    {t("Play Now")}
+                                    {/* {t("Play Now")} */}
+                                    <button className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-xl font-black text-blue-400 ring-1 ring-inset ring-blue-400 banner-btn banner-btn-blue">
+                                        {t("Play Now")}<span aria-hidden>_</span>
+                                        <span aria-hidden className="banner-btn__glitch">{t("Play Now")}</span>
+                                    </button>
                                 </a>
                             </div>
                         ) : (
@@ -124,9 +127,13 @@ export default function Banner(brand) {
                                 <a
                                     href={brand.link}
                                     target="blank_"
-                                    className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-xl font-black text-pink-400 ring-1 ring-inset ring-pink-400 hover:bg-pink-400/70 hover:text-white"
+
                                 >
-                                    {t("Try Your Luck!")}
+                                    {/* {t("Try Your Luck!")} */}
+                                    <button className="inline-flex items-center rounded-md bg-blue-400/10 px-5 py-2.5 text-sm sm:text-xl font-black text-pink-400 ring-1 ring-inset ring-pink-400 banner-btn banner-btn-pink">
+                                        {t("Try Your Luck!")}<span aria-hidden>_</span>
+                                        <span aria-hidden className="banner-btn__glitch">{t("Try Your Luck!")}</span>
+                                    </button>
                                 </a>
                             </div>
                         )

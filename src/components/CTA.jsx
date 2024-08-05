@@ -33,7 +33,7 @@ export default function CTA({newUrl}) {
 
               <a href={"https://topbon.us/"} target="blank_">
               {/* <a href={"https://topbon.us/" + newUrl} target="blank_"> */}
-                <button className="cybr-btn"> {t("Follow us")}<span aria-hidden>_</span>
+                <button className="cybr-btn"> {t("More offers")}<span aria-hidden>_</span>
                   <span aria-hidden className="cybr-btn__glitch">{t("Let's go")}</span>
                   <span aria-hidden className="cybr-btn__tag">R25</span>
                 </button>
