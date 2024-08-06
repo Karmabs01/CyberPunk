@@ -22,17 +22,6 @@ const description = [
     "Level up your gaming experience! Exclusive rewards for loyal players. Every game brings you closer to greatness."
 ]
 
-const action = [
-    "Claim Your Bonus!",
-    "Try Your Luck!",
-    "Spin to Win!",
-    "Hit the Jackpot!",
-    "Play and Win!",
-    "Start Winning Now!",
-    "Play for Rewards!",
-    "Get Free Spins!",
-    "Win Big Today!"
-]
 
 function getRandomBackground() {
     const totalImages = 8;
@@ -57,7 +46,6 @@ export default function Banner(brand) {
 
     const backgroundImage = getRandomBackground();
     const desc = getRandomDescription(description)
-    const desc2 = getRandomDescription(action)
 
 
     return (
@@ -83,30 +71,31 @@ export default function Banner(brand) {
                     <figure>
                         <blockquote className="text-sm sm:text-lg font-bold text-white sm:text-xl sm:leading-8">
                             {brand.image === "-1" ? (
-                                <div className="flex flex-row items-center">
-                                    <img className="banner-logo rounded" src={brand.logo} alt="" />
+                                <div>
+                                    <div className="flex flex-row items-center">
+                                        <img className="banner-logo rounded" src={brand.logo} alt="" />
+                                        <h1 className="neon-blue text-lg sm:text-3xl">
+                                            {t(brand.brand)}
+                                        </h1>
+                                    </div>
+                                    <h5 className="text-sm sm:text-xl fix-height">{t(desc)}</h5>
+                                    <h4 className="neon-pink text-lg sm:text-2xl fix-height">
+                                        <span> {brand.bonus} </span>
+                                    </h4>
+                                </div>
+                            ) : (
+                                <div>
                                     <h1 className="neon-blue text-lg sm:text-3xl">
                                         {t(brand.brand)}
                                     </h1>
+                                    {brand.image === "0" ? (
+                                        <h5 className="text-sm sm:text-xl fix-height neon-pink"><span>{t("The week's biggest jackpot awaits! ")}</span> {t("With a prize pool that could change your life, take your chance to hack the system and hit the ultimate payout.")}</h5>
+                                    ) : (
+                                        <h5 className="text-sm sm:text-xl fix-height neon-pink">{t("Unleash your luck at the cyber tables.")} <span>{t(" Bet big, win bigger. ")}</span> {t("Experience the ultimate thrill of winning.")}</h5>
+                                    )}
                                 </div>
-                            ) : (
-                                <h1 className="neon-blue text-lg sm:text-3xl">
-                                    {t(brand.brand)}
-                                </h1>
                             )
 
-                            }
-                            <h5 className="text-sm sm:text-xl fix-height">{t(desc)}</h5>
-
-                            {brand.image === "-1" ? (
-                                <h4 className="neon-pink text-lg sm:text-2xl fix-height">
-                                    <span> {brand.bonus} </span>
-                                </h4>
-                            ) : (
-                                <h4 className="neon-pink text-lg sm:text-2xl mb-10">
-                                    <span> {t(desc2)} </span>
-                                </h4>
-                            )
                             }
                         </blockquote>
                         {brand.image === "-1" ? (
