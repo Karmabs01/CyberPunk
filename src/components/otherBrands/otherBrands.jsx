@@ -125,7 +125,7 @@ function OtherBrands({
                         type="button"
                         className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-transparent bg-white text-blue-400 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                       >
-                        <PlayCircleIcon aria-hidden="true" className="h-15 w-15" />
+                        <PlayCircleIcon aria-hidden="true" className="h-8 w-8" />
                         {/* <img src={play} alt="play" />  */}
                       </button>
                     </div>
