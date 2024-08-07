@@ -1059,6 +1059,35 @@ p {
   transition: background 0.2s;
 }
 
+@media (min-width: 320px) and (max-width: 570px) {
+  .banner-btn {
+    font-size: 15px;
+    outline: transparent;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 700;
+    border: 0;
+    min-width: 200px;
+    height: 55px;
+    line-height: 55px;
+    transition: background 0.2s;
+  }
+}
+
+@media (min-width: 570px) and (max-width: 768px) {
+  .banner-btn {
+    font-size: 20px;
+    outline: transparent;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 700;
+    border: 0;
+    min-width: 250px;
+    height: 65px;
+    line-height: 65px;
+    transition: background 0.2s;
+  }
+}
 .banner-btn:hover {
   --primary: hsl(
     var(--primary-hue),
