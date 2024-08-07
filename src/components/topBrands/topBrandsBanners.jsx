@@ -126,7 +126,7 @@ function TopBrandsBanners({
                                     <Banner
                                         key={index}
                                         brand="Biggest jackpot"
-                                        link={`${redirectUrl}/${newUrl}&creative_id=L_cyber_random_jackpot`}
+                                        link={`${redirectUrl}/${newUrl}L_cyber_random_jackpot`}
                                         bonus=""
                                         image = "0"
                                     />
@@ -138,7 +138,7 @@ function TopBrandsBanners({
                                     <Banner
                                         key={index+1}
                                         brand="Exclusive offer"
-                                        link={`${redirectUrl}/${newUrl}&creative_id=L_cyber_random_offer`}
+                                        link={`${redirectUrl}/${newUrl}L_cyber_random_offer`}
                                         bonus=""
                                         image = "4"
 
