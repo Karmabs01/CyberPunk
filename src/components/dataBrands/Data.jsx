@@ -139,6 +139,7 @@ function ChildComponent() {
     { code: "no", name: "Norway", flag: "🇳🇴" },
     { code: "nz", name: "New Zealand", flag: "🇳🇿" },
     { code: "pl", name: "Poland", flag: "🇵🇱" },
+    { code: "pt", name: "Portugal", flag: "🇵🇹" },
     { code: "se", name: "Sweden", flag: "🇸🇪" },
     { code: "sk", name: "Slovakia", flag: "🇸🇰" },
     { code: "all", name: "World", flag: "🌍" },
@@ -156,6 +157,9 @@ function ChildComponent() {
       countryOptionsValue = countryOptions1044; // Для partner1044
       break;
     case "CLD_VIP":
+      countryOptionsValue = countryOptionsCLD_VIP; // CLD_VIP
+      break;
+    case "partner1045":
       countryOptionsValue = countryOptionsCLD_VIP; // CLD_VIP
       break;
     default:

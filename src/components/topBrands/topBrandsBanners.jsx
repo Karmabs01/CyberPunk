@@ -37,25 +37,28 @@ function TopBrandsBanners({
     useEffect(() => {
         let url = "";
         switch (source) {
-          case "partner1039":
-            url = "https://link.reg2dep.business/topbonus_rnd39";
-            break;
-          case "partner1043":
-            url = "https://link.reg2dep.business/topbonus_rnd43";
-            break;
-          case "partner1044":
-            url = "https://link.reg2dep.business/topbonus_rnd44";
-            break;
-          case "CLD_VIP":
-            url = "https://link.reg2dep.business/topbonus_rndcld";
-            break;
-          default:
-            url = "https://link.reg2dep.business/topbonus_rnd";
+            case "partner1039":
+                url = "https://link.reg2dep.business/topbonus_rnd39";
+                break;
+            case "partner1043":
+                url = "https://link.reg2dep.business/topbonus_rnd43";
+                break;
+            case "partner1044":
+                url = "https://link.reg2dep.business/topbonus_rnd44";
+                break;
+            case "CLD_VIP":
+                url = "https://link.reg2dep.business/topbonus_rndcld";
+                break;
+            case "partner1045":
+                url = "https://link.reg2dep.business/topbonus_rndcld";
+                break;
+            default:
+                url = "https://link.reg2dep.business/topbonus_rnd";
         }
-        
+
         setRedirectUrl(url);
-      }, [source]);
-      console.log("SOURCE: URL: ", redirectUrl)
+    }, [source]);
+    console.log("SOURCE: URL: ", redirectUrl)
 
     useEffect(() => {
         let newFilteredData = [];
@@ -118,37 +121,37 @@ function TopBrandsBanners({
 
     return (
         <div className="mb-10">
-                <section className="trending" id="experience">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-12 col-lg-6 mb-6 mb-lg-0 " data-aos="fade-right">
-                                {filteredData.slice(0, 1).map((rowData, index) => (
-                                    <Banner
-                                        key={index}
-                                        brand="Biggest jackpot"
-                                        link={`${redirectUrl}/${newUrl}L_cyber_random_jackpot`}
-                                        bonus=""
-                                        image = "0"
-                                    />
-                                ))
-                                }
-                            </div>
-                            <div className="col-12 col-lg-6 mb-6 mb-lg-0" data-aos="fade-left">
-                                {filteredData.slice(1, 2).map((rowData, index) => (
-                                    <Banner
-                                        key={index+1}
-                                        brand="Exclusive offer"
-                                        link={`${redirectUrl}/${newUrl}L_cyber_random_offer`}
-                                        bonus=""
-                                        image = "4"
+            <section className="trending" id="experience">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-12 col-lg-6 mb-6 mb-lg-0 " data-aos="fade-right">
+                            {filteredData.slice(0, 1).map((rowData, index) => (
+                                <Banner
+                                    key={index}
+                                    brand="Biggest jackpot"
+                                    link={`${redirectUrl}/${newUrl}L_cyber_random_jackpot`}
+                                    bonus=""
+                                    image="0"
+                                />
+                            ))
+                            }
+                        </div>
+                        <div className="col-12 col-lg-6 mb-6 mb-lg-0" data-aos="fade-left">
+                            {filteredData.slice(1, 2).map((rowData, index) => (
+                                <Banner
+                                    key={index + 1}
+                                    brand="Exclusive offer"
+                                    link={`${redirectUrl}/${newUrl}L_cyber_random_offer`}
+                                    bonus=""
+                                    image="4"
 
-                                    />
-                                ))
-                                }
-                            </div>
+                                />
+                            ))
+                            }
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
         </div>
     );
 }

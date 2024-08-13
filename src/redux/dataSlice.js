@@ -1,13 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-
-
 const apiOld = "https://bonusnumber1.com/api/brandsNew/read.php";
 const apiNew = "https://bonusnumber1.com/api/brandsNew2/read.php";
 const api1043 = "https://bonusnumber1.com/api/brandsNew3/read.php";
 const api1044 = "https://bonusnumber1.com/api/brandsNew4/read.php";
 const apiCLD_VIP = "https://bonusnumber1.com/api/brandsNew5/read.php";
-
 
 const searchParams = new URLSearchParams(window.location.search);
 searchParams.delete("brand");
@@ -42,6 +39,9 @@ export const fetchData = createAsyncThunk(
           url = api1044; // Для partner1044
           break;
         case "CLD_VIP":
+          url = apiCLD_VIP; // CLD_VIP
+          break;
+        case "partner1045":
           url = apiCLD_VIP; // CLD_VIP
           break;
         default:
